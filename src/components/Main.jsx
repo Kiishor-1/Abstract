@@ -41,7 +41,7 @@ export default function Main({ searchTerm }) {
 
   const renderSkeletonLoader = () => {
     return (
-      <div className="w-full py-12 mx-auto flex flex-wrap gap-10 justify-center">
+      <div className="w-full py-12 mx-auto flex flex-wrap gap-10 justify-center px-4 sm:px-6 md:px-8">
         {Array(4).fill().map((_, idx) => (
           <div key={idx} className="w-64 h-40 rounded-lg bg-gray-200 animate-pulse"></div>
         ))}
@@ -51,7 +51,7 @@ export default function Main({ searchTerm }) {
 
   return (
     <div className="w-full">
-      <div className="py-12 w-full mx-auto flex flex-wrap gap-10 justify-center">
+      <div className="py-12 w-full mx-auto flex flex-wrap gap-10 justify-center px-4 sm:px-6 md:px-8">
         {loading ? (
           renderSkeletonLoader()
         ) : filteredData.length > 0 ? (

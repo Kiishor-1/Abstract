@@ -3,7 +3,7 @@ import Logo from '../assets/images/logo.png';
 
 export default function Navbar() {
     return (
-        <div className="bg-black text-white sticky top-0">
+        <div className="bg-black text-white sticky top-0 z-[100]">
             <nav className="max-w-[1450px] mx-auto py-2 flex justify-between items-center">
                 <Link to={"/"} className="flex items-center gap-0"> 
                     <div className="px-3 border-r-2 flex items-center gap-2">
