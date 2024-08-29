@@ -4,11 +4,11 @@ import Logo from '../assets/images/logo.png';
 export default function Navbar() {
     return (
         <div className="bg-black text-white sticky top-0 z-[100]">
-            <nav className="max-w-[1450px] mx-auto py-2 flex justify-between items-center">
+            <nav className="max-w-[1450px] mx-auto py-2 flex justify-between mx-2 items-center">
                 <Link to={"/"} className="flex items-center gap-0"> 
                     <div className="px-3 border-r-2 flex items-center gap-2">
                         <div className="rounded-md overflow-hidden">
-                        <img src={Logo} className="h-[25px] w-[25px]" alt="" />
+                        <img src={Logo} className="h-[25px] w-[25px] hidden lg:block" alt="" />
                         </div>
                         Abstract</div>
                     <div className="px-3">Help Center</div>
