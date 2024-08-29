@@ -43,7 +43,7 @@ export default function Main({ searchTerm }) {
     <div className="w-full">
       <div className="py-12 w-full mx-auto flex flex-wrap gap-10 justify-center">
         {loading ? (
-          <div>Loading...</div>
+          <div className="text-center">Loading...</div>
         ) : filteredData.length > 0 ? (
           filteredData.map((card, id) => <Card card={card} key={id} />)
         ) : searchTerm ? (
