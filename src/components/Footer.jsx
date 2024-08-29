@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Logo from '../assets/images/Logo.png'
+import Logo from '../assets/images/logo.png'
 import { FOOTER_ENDPOINTS } from "../services/api";
 
 const {FOOTER_DATA} = FOOTER_ENDPOINTS;
