@@ -52,34 +52,34 @@ export default function Footer() {
     <footer className="bg-black text-white py-2 min-w-[350px]">
       <div className="max-w-[1450px] min-h-[250px] py-4 px-3 mx-auto flex gap-2 flex-wrap">
         <div className="footer-item px-4" style={{ flex: "0 0 17%" }}>
-          <h2>Abstract</h2>
-          <ul>
+          <h2 className="text-lg font-semibold">Abstract</h2>
+          <ul className="text-sm">
             {footerData.abstract.map((item, index) => (
               <li key={index} className="decoration-none">{item}</li>
             ))}
           </ul>
         </div>
         <div className="footer-item px-4" style={{ flex: "0 0 17%" }}>
-          <h2>Resources</h2>
-          <ul>
+          <h2 className="text-lg font-semibold">Resources</h2>
+          <ul className="text-sm">
             {footerData.resources.map((item, index) => (
               <li key={index} className="decoration-none">{item}</li>
             ))}
           </ul>
         </div>
         <div className="footer-item px-4" style={{ flex: "0 0 17%" }}>
-          <h2>Community</h2>
-          <ul>
+          <h2 className="text-lg font-semibold">Community</h2>
+          <ul className="text-sm">
             {footerData.community.map((item, index) => (
               <li key={index} className="decoration-none">{item}</li>
             ))}
           </ul>
         </div>
         <div className="footer-item px-4" style={{ flex: "0 0 17%" }}>
-          <h2>Company</h2>
-          <ul>
+          <h2 className="text-lg font-semibold">Company</h2>
+          <ul className="text-sm">
             {footerData.company.map((item, index) => (
-              <li key={index} className="decoration-none">{item}</li>
+              <li key={index} className={index === 3 ? "mt-4" : ""}>{item}</li>
             ))}
           </ul>
         </div>
