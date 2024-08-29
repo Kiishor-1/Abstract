@@ -49,8 +49,8 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-black text-white py-2">
-      <div className="max-w-[1450px] min-h-[250px] py-4 px-3 mx-auto flex flex-wrap">
+    <footer className="bg-black text-white py-2 min-w-[350px]">
+      <div className="max-w-[1450px] min-h-[250px] py-4 px-3 mx-auto flex gap-2 flex-wrap">
         <div className="footer-item px-4" style={{ flex: "0 0 17%" }}>
           <h2>Abstract</h2>
           <ul>
@@ -83,7 +83,7 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div className="flex-1 gap-1 self-end lex-col px-4 mb-4 text-sm" >
+        <div className="flex-1 gap-1 lg:py-0 py-4 self-end lex-col px-4 mb-4 text-sm" >
           <img src={Logo} alt="Logo" className="w-[25px] rounded-md" />
           <p>Copyright @ {new Date().getFullYear()}</p>
           <p>Abstract Studio Design, Inc</p>
