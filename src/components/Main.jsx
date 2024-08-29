@@ -4,7 +4,7 @@ import Card from "./Card";
 import { toast } from "react-hot-toast";
 import { CARD_ENDPOINTS } from "../services/api";
 
-const {FETCH_ALL_CARDS} = CARD_ENDPOINTS;
+const { FETCH_ALL_CARDS } = CARD_ENDPOINTS;
 
 export default function Main({ searchTerm }) {
   const [cardData, setCardData] = useState([]);
@@ -39,20 +39,29 @@ export default function Main({ searchTerm }) {
     }
   }, [searchTerm, cardData]);
 
+  const renderSkeletonLoader = () => {
+    return (
+      <div className="w-full py-12 mx-auto flex flex-wrap gap-10 justify-center">
+        {Array(4).fill().map((_, idx) => (
+          <div key={idx} className="w-64 h-40 rounded-lg bg-gray-200 animate-pulse"></div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className="w-full">
       <div className="py-12 w-full mx-auto flex flex-wrap gap-10 justify-center">
         {loading ? (
-          <div className="text-center">Loading...</div>
+          renderSkeletonLoader()
         ) : filteredData.length > 0 ? (
           filteredData.map((card, id) => <Card card={card} key={id} />)
         ) : searchTerm ? (
-          <div className="font-semibold">No Such Card available</div>
+          <div className="font-semibold min-h-[72px]">No Such Card available</div>
         ) : (
-          <div className="font-semibold">No Data Found</div>
+          <div className="font-semibold min-h-[72px]">No Data Found</div>
         )}
       </div>
     </div>
   );
 }
-
